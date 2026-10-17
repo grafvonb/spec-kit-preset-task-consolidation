@@ -131,15 +131,10 @@ script metadata. These rendering differences were inspected during validation.
 
 These checks validate installation and composition, not agent execution. Small
 and large feature trials, consolidation quality, and actual hook execution still
-need behavioral evaluation. The [behavioral regression cases](examples/behavioral-review.md)
-define synthetic input and observable review expectations, including suspended
-process instances and unavailable live validation. They are a manual evaluation
-specification, not evidence that agent execution or live acceptance has passed.
+need behavioral evaluation.
 
 ## Project files
 
 - [preset.yml](preset.yml): metadata, compatibility requirement, and command declaration.
 - [commands/speckit.tasks.md](commands/speckit.tasks.md): consolidation wrapper.
-- [examples/behavioral-review.md](examples/behavioral-review.md): behavioral regression inputs and evaluation checks.
-- [CHANGELOG.md](CHANGELOG.md): version history.
 - [LICENSE](LICENSE): MIT license.
