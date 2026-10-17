@@ -1,8 +1,9 @@
 # Task Consolidation
 
 A command-only Spec Kit preset that reviews generated tasks, removes redundant
-work, and merges overly granular steps while preserving coverage, dependencies,
-and useful parallelism.
+work, and right-sizes cohesive outcomes while preserving coverage, dependencies,
+and useful parallelism. Safe delivery boundaries and verifiable outcomes matter
+more than reducing task count.
 
 ## Requirements
 
@@ -48,29 +49,20 @@ The command follows this execution order:
 3. Handle the underlying post-execution hooks against the consolidated artifact.
 4. Report completion, including a concise consolidation summary.
 
-During the review, the agent is instructed to:
+The review turns fragmented or oversized work into bounded implementation steps
+with exact paths and observable acceptance checks. It keeps public inputs behind
+required guards, gives tests clear ownership, and separates local implementation
+checks from live acceptance that needs an external environment. Common completion
+rules are stated once; actual prerequisites remain distinct from scheduling choices.
 
-- Remove duplicates, redundant setup, and work unsupported by the feature or
-  project requirements; retain tasks when their necessity is uncertain.
-- Merge related small steps only when they form a cohesive outcome in the same
-  story and phase, with enough detail and exact file paths to remain actionable.
-- Preserve requirements, acceptance criteria, story boundaries, prerequisites,
-  independent story testability, and useful parallel work.
-- Preserve requested tests and required test-first ordering, following the
-  underlying command's rules for when tests are generated.
-- Renumber tasks and repair references, dependencies, `[P]` markers, counts,
-  parallel execution examples, and implementation strategy.
+Required coverage, story/phase boundaries, test-first ordering, and useful parallel
+work are preserved. Task IDs are renumbered and references repaired. The report
+briefly explains the main changes, or says none were needed. There is no task-count
+target, extra approval step, or requirement to justify every unchanged task.
 
-There is no fixed task-count limit, reduction quota, or target percentage. An
-appropriately sized task list should remain unchanged. The completion report
-includes draft and consolidated counts and explains significant removals or
-merges, or states that no changes were warranted.
-
-Use this preset when task generation produces redundant work or fragments a
-cohesive change into unnecessarily small steps. It is not intended to enforce a
-fixed planning budget, combine unrelated work, or remove required coverage to
-make a task list shorter. Consolidation is performed by the agent following the
-prompt; it is not a deterministic task-list formatter.
+This supports focused implementation iterations, including Ralph-style execution,
+but does not convert tasks to Ralph JSON or change the underlying workflow.
+Consolidation follows agent instructions; it is not a deterministic formatter.
 
 ## Inspect the installation
 
@@ -139,11 +131,15 @@ script metadata. These rendering differences were inspected during validation.
 
 These checks validate installation and composition, not agent execution. Small
 and large feature trials, consolidation quality, and actual hook execution still
-need behavioral evaluation.
+need behavioral evaluation. The [behavioral regression cases](examples/behavioral-review.md)
+define synthetic input and observable review expectations, including suspended
+process instances and unavailable live validation. They are a manual evaluation
+specification, not evidence that agent execution or live acceptance has passed.
 
 ## Project files
 
 - [preset.yml](preset.yml): metadata, compatibility requirement, and command declaration.
 - [commands/speckit.tasks.md](commands/speckit.tasks.md): consolidation wrapper.
+- [examples/behavioral-review.md](examples/behavioral-review.md): behavioral regression inputs and evaluation checks.
 - [CHANGELOG.md](CHANGELOG.md): version history.
 - [LICENSE](LICENSE): MIT license.
