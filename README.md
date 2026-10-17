@@ -16,6 +16,18 @@ Spec Kit `1.2.1`. Behavioral evaluation of generated task lists remains pending.
 
 ## Installation
 
+From the root of your initialized Spec Kit project, install release `v0.1.0`:
+
+```bash
+specify preset add --from https://github.com/grafvonb/spec-kit-preset-task-consolidation/archive/refs/tags/v0.1.0.zip
+```
+
+This installs the versioned release directly; no catalog entry is required.
+See the [release notes](https://github.com/grafvonb/spec-kit-preset-task-consolidation/releases/tag/v0.1.0)
+for scope and validation limits.
+
+### Local development installation
+
 Clone this repository:
 
 ```bash
