@@ -1,0 +1,26 @@
+schema_version: "1.0"
+
+preset:
+  id: "task-consolidation"
+  name: "Task Consolidation"
+  version: "0.1.0"
+  description: "Review and consolidate generated tasks, removing redundant work and merging overly granular steps while preserving coverage and dependencies."
+  author: "Adam Bogdan Boczek"
+  repository: "https://github.com/grafvonb/spec-kit-preset-task-consolidation"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=1.2.1"
+
+provides:
+  templates:
+    - type: "command"
+      name: "speckit.tasks"
+      file: "commands/speckit.tasks.md"
+      description: "Consolidate drafted tasks before post-execution hooks and the completion report."
+      strategy: "wrap"
+
+tags:
+  - "tasks"
+  - "workflow"
+  - "consolidation"
