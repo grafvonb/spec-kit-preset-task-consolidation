@@ -3,7 +3,7 @@ schema_version: "1.0"
 preset:
   id: "task-consolidation"
   name: "Task Consolidation"
-  version: "0.1.0"
+  version: "0.2.0"
   description: "Review generated tasks for cohesive outcomes, safe delivery boundaries, and clear verification while preserving coverage and dependencies."
   author: "Adam Bogdan Boczek"
   repository: "https://github.com/grafvonb/spec-kit-preset-task-consolidation"

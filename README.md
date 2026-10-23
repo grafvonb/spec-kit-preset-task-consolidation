@@ -16,14 +16,14 @@ Spec Kit `1.2.1`. Behavioral evaluation of generated task lists remains pending.
 
 ## Installation
 
-From the root of your initialized Spec Kit project, install release `v0.1.0`:
+From the root of your initialized Spec Kit project, install release `v0.2.0`:
 
 ```bash
-specify preset add --from https://github.com/grafvonb/spec-kit-preset-task-consolidation/archive/refs/tags/v0.1.0.zip
+specify preset add --from https://github.com/grafvonb/spec-kit-preset-task-consolidation/archive/refs/tags/v0.2.0.zip
 ```
 
 This installs the versioned release directly; no catalog entry is required.
-See the [release notes](https://github.com/grafvonb/spec-kit-preset-task-consolidation/releases/tag/v0.1.0)
+See the [release notes](https://github.com/grafvonb/spec-kit-preset-task-consolidation/releases/tag/v0.2.0)
 for scope and validation limits.
 
 ### Local development installation
@@ -43,6 +43,11 @@ specify preset add --dev /absolute/path/to/spec-kit-preset-task-consolidation
 
 This is a local development installation. A published release or catalog entry
 is not required.
+
+Spec Kit `>=1.2.3` reads [.presetignore](.presetignore) beside `preset.yml` to
+exclude repository metadata, IDE settings, and temporary files from the installed
+preset. These rules apply to local and archive installations; `.gitignore` does
+not control installation filtering. Older CLI versions do not apply these rules.
 
 ## Usage and behavior
 
